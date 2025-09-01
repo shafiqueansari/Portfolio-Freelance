@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta & Title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- External Libraries -->
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <!-- Logo + Navigation Links + Hamburger Menu (for mobile) -->
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </header>
+
+  <!-- ================= HOME SECTION ================= -->
+  <!-- Intro text, animated typing effect, and profile image -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h2>Hello, I am</h2>
+      <h1>Firdous Aazam</h1>
+      <h2 class="subtitle">And I'm a <span class="text"></span></h2>
+      <p>
+        I craft bold, modern visuals that connect brands with people.<br />
+        Passionate about creative design, branding, and digital experiences.
+      </p>
+      <button class="cv-btn" onclick="openCV()">CV Resume</button>
+    </div>
+    <div class="home-image">
+      <div class="profile-border">
+        <img src="images/png1.png" alt="Profile picture" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <!-- Bio and design philosophy -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <h2>About<span>Me</span></h2>
+      <h4>Graphic Designer</h4>
+      <p>
+        Creative Graphic Designer with 1.8 years of hands-on experience in print and digital design.
+        Skilled in transforming ideas into bold, purposeful visuals across branding, packaging
+        and social media. Passionate about clean aesthetics, storytelling, and functional layouts.
+        Known for blending creativity with strategic thinking to deliver visually compelling and
+        brand-aligned designs.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES SECTION ================= -->
+  <!-- List of services offered (each with an icon and sub-items) -->
+  <section class="services" id="services">
+    <h1 class="sub-title">My <span>Services</span></h1>
+    <div class="service-list">
+
+      <!-- Branding Service -->
+      <div>
+        <i class="fa-solid fa-paintbrush"></i>
+        <h2>Branding & Identity Design</h2>
+        <ul>
+          <li>Logo Design</li>
+          <li>Brand Guidelines</li>
+          <li>Business Cards</li>
+          <li>Stationery Design</li>
+        </ul>
+      </div>
+
+      <!-- Social Media Service -->
+      <div>
+        <i class="bx bx-share-alt" style="color: #00eeff;"></i>
+        <h2>Social Media Design</h2>
+        <ul>
+          <li>Instagram Posts & Carousels</li>
+          <li>Facebook Banners</li>
+          <li>YouTube Thumbnails</li>
+          <li>Reels Thumbnails</li>
+          <li>Ad Creatives</li>
+        </ul>
+      </div>
+
+      <!-- Print Design Service -->
+      <div>
+        <i class="bx bx-printer" style="color: #00eeff;"></i>
+        <h2>Print Design</h2>
+        <ul>
+          <li>Brochures</li>
+          <li>Flyers</li>
+          <li>Posters</li>
+          <li>Banners</li>
+          <li>Menu Cards, Standees</li>
+          <li>Visiting Cards</li>
+        </ul>
+      </div>
+
+      <!-- UI & Web Mockup Service -->
+      <div>
+        <i class="bx bx-desktop" style="color: #00eeff;"></i>
+        <h2>Web & UI Mockups</h2>
+        <ul>
+          <li>Website Banners</li>
+          <li>Landing Page Layouts (Figma-Based)</li>
+          <li>UI Concepts for Web/Mobile</li>
+        </ul>
+      </div>
+
+      <!-- Packaging Design -->
+      <div>
+        <i class="bx bx-package" style="color: #00eeff;"></i>
+        <h2>Packaging Design</h2>
+        <ul>
+          <li>Product Labels</li>
+          <li>Box Design</li>
+          <li>Bottle/Can Mockups (like Denver Deodrant)</li>
+        </ul>
+      </div>
+
+      <!-- Mockup Presentations -->
+      <div>
+        <i class="fa-brands fa-slideshare"></i>
+        <h2>Mockup Presentation Design</h2>
+        <ul>
+          <li>Product in real-world scenes</li>
+          <li>Billboard/Standee in realistic background</li>
+          <li>Portfolio-quality visuals (for Behance/clients)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
+  <!-- Interactive thumbnails with modal previews -->
+  <section id="projects">
+    <h1 class="sub-title">My <span>Projects</span></h1>
+
+    <!-- Project Thumbnails -->
+    <div class="project-row">
+      <div class="project-card" onclick="openBranding()">
+        <img src="images/project1.jpg" alt="Branding Project Thumbnail" />
+        <p>Branding</p>
+      </div>
+
+      <div class="project-card" onclick="openSocialMedia()">
+        <img src="images/project2.jpg" alt="Social Media Project Thumbnail" />
+        <p>Social Media Design</p>
+      </div>
+
+      <div class="project-card" onclick="openPrintDesign()">
+        <img src="images/printdesign.jpg" alt="Print Design Project Thumbnail" />
+        <p>Print Design</p>
+      </div>
+    </div>
+
+    <!-- Project Modals -->
+    <div id="brandingModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeBranding()">&times;</span>
+        <img src="images/branding.jpg" alt="Branding Image" class="modal-img" />
+      </div>
+    </div>
+
+    <div id="socialMediaModal" class="modal2">
+      <div class="modal-content2">
+        <span class="close2" onclick="closeSocialMedia()">&times;</span>
+        <img src="images/socialmedia.jpg" alt="Social Media Image" class="modal-img2" />
+      </div>
+    </div>
+
+    <div id="printDesignModal" class="modal3">
+      <div class="modal-content3">
+        <span class="close3" onclick="closePrintDesign()">&times;</span>
+        <img src="images/printdesign1.jpg" alt="Print Design" class="modal-img3" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TOOLS SECTION ================= -->
+  <!-- Software and tools used (logos and names) -->
+  <section id="tools">
+    <h1 class="sub-title">Tools <span>I Use</span></h1>
+    <div class="tools-large-grid">
+      <div class="tool-large-card"><img src="images/tool1.png" alt="Adobe Illustrator" /><h3>Adobe Illustrator</h3></div>
+      <div class="tool-large-card"><img src="images/tool2.png" alt="Adobe Photoshop" /><h3>Adobe Photoshop</h3></div>
+      <div class="tool-large-card"><img src="images/tool3.png" alt="Figma" /><h3>Figma</h3></div>
+      <div class="tool-large-card"><img src="images/tool4.png" alt="MidJourney" /><h3>MidJourney</h3></div>
+      <div class="tool-large-card"><img src="images/tool5.png" alt="ChatGPT" /><h3>ChatGPT</h3></div>
+      <div class="tool-large-card"><img src="images/tool6.png" alt="Leonard" /><h3>LeoNard</h3></div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <!-- WhatsApp, Email, and Location contact cards -->
+  <section id="contact" class="contact-section">
+    <h2 class="contact-title">Contact Me</h2>
+    <div class="contact-cards">
+
+      <div class="contact-card">
+        <div class="card-content">
+          <h3 class="whatsapp-header"><i class="fab fa-whatsapp"></i> WhatsApp Me</h3>
+          <p>+91 9973208784</p>
+        </div>
+        <a href="https://wa.me/919973208784" target="_blank" class="whatsapp-btn">Click Here</a>
+      </div>
+
+ <!-- Email Card -->
+<div class="contact-card">
+  <div class="card-content">
+    <h3 class="email-header">
+      <i class="fas fa-envelope"></i> Email Me
+    </h3>
+    <p>firdousaazam039@gmail.com</p>
+  </div>
+  <a 
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=firdousaazam039@gmail.com" 
+    target="_blank" 
+    class="email-btn"
+  >
+    Click Here
+  </a>
+</div>
+
+
+      <div class="contact-card">
+        <div class="card-content">
+          <h3 class="location-header"><i class="fas fa-map-marker-alt"></i> Location</h3>
+          <p>Dhanbad, Jharkhand, India</p>
+        </div>
+        <a href="https://maps.app.goo.gl/1VYnX4ZRyXRpJBD97?g_st=aw" target="_blank" class="location-btn">Click Here</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= JS SCRIPTS ================= -->
+  <script src="script.js"></script>
+</body>
+</html>
